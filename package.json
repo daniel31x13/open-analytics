@@ -1,0 +1,21 @@
+{
+  "name": "open-analytics-core-http",
+  "version": "1.0.0",
+  "description": "Get real-time online users and save the data to MongoDB database",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "author": "Daniel",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "fast-geoip": "^1.1.54",
+    "mongodb": "^4.3.0",
+    "socket.io": "^4.4.0"
+  }
+}
