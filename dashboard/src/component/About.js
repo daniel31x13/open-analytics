@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Footer = () => {
-  return ( <div className='Footer'>
+const About = () => {
+  return ( <div className='About'>
       <h1>Open Analytics</h1>
       <h6>By Daniel31x13</h6>
       <p>A somewhat "minimalist" SEO analytics for your website.</p>
@@ -9,4 +9,4 @@ const Footer = () => {
   </div> );
 };
 
-export default Footer;
+export default About;

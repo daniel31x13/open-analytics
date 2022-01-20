@@ -6,11 +6,12 @@ import NewVsReturn from './component/NewVsReturn';
 import TopPages from './component/TopPages';
 import VisitsByCountry from './component/VisitsByCountry';
 import HoursOfActivityPerDay from './component/HoursOfActivityPerDay';
-import Footer from './component/Footer';
+import About from './component/About';
 
 function App() {
   return (
     <div className='container'>
+      <About />
       <ActiveVisitors />
       <AvgVisitDuration />
       <Devices />
@@ -18,7 +19,6 @@ function App() {
       <TopPages />
       <HoursOfActivityPerDay />
       <NewVsReturn />
-      <Footer />
     </div>
   );
 }
