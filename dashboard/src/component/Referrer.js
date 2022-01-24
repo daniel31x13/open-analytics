@@ -11,13 +11,13 @@ import {
 import { Bar } from 'react-chartjs-2';
 
 const Referrer = () => {
-  const labels = ['/home', '/samplePage', '/anotherSamplePage', '/alsoAnotheSamplePage', 'lastSamplePage'];
+  const labels = ['/home1', '/samplePage1', '/anotherSamplePage2', '/alsoAnotheSamplePage2', 'lastSamplePage3'];
 
   const data = {
     labels,
     datasets: [
       {
-        label: 'Links',
+        label: 'Referrer',
         data: [4,3,2,5,1],
         backgroundColor: 'rgba(255, 99, 132, 0.8)',
       }

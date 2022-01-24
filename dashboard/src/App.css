@@ -1,127 +1,220 @@
-@media (min-width: 900px) {
+@media (min-width: 1250px) {
   .container {
-    padding: 7px;
     height: 97vh;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 7px;
-    grid-row-gap: 7px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 7px 7px;
+    padding: 7px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "About ActiveVisitors Referrer HoursOfActivityPerDay HoursOfActivityPerDay"
+      "VisitsByCountry AvgVisitDuration Referrer HoursOfActivityPerDay HoursOfActivityPerDay"
+      "VisitsByCountry NewVsReturn NewVsReturn HoursOfActivityPerDay HoursOfActivityPerDay"
+      "Devices NewVsReturn NewVsReturn TopPages TopPages"
+      "Devices NewVsReturn NewVsReturn TopPages TopPages";
   }
   
-  .About {
+  .About { 
     padding: 0.5em;
-    grid-area: 1 / 1 / 2 / 2;
     border: solid;
     text-align: center;
+    grid-area: About; 
   }
-
+  
   .About p {
     font-size: x-small;
   }
-  
-  .ActiveVisitors {
-    grid-area: 1 / 2 / 2 / 3; 
-    text-align: center;
-    padding: 0.5em;
-    border: solid;
-  }
-  
-  .AvgVisitDuration {
-    grid-area: 2 / 2 / 3 / 3; 
-    text-align: center;
-    padding: 0.5em;
-    border: solid;
-  }
-  
-  .Devices {
-    grid-area: 4 / 1 / 6 / 2;
-    padding: 0.5em;
-    border: solid;
-  }
-  
-  
-  .VisitsByCountry {
-    grid-area: 2 / 1 / 4 / 2;
-    padding: 0.5em;
-    border: solid;
-  }
-  
-  .TopPages { 
-    grid-area: 4 / 4 / 6 / 6;
-    padding: 0.5em;
-    border: solid;
-  }
-  
-  .HoursOfActivityPerDay {
-    grid-area: 3 / 2 / 6 / 4;
-    padding: 0.5em;
-    border: solid;
-  }
-  
-  .NewVsReturn {
-    grid-area: 1 / 4 / 4 / 6; 
-    padding: 0.5em;
-    border: solid;
-  }
 
-  .Referrer {
-    grid-area: 1 / 3 / 3 / 4;
-    padding: 0.5em;
-    border: solid;
-  }
-}
-
-@media (max-width: 900px) {
-  .About {
-    padding: 0.5em;
-    margin: 8px;
-    border: solid;
-    text-align: center;
-  }
-  
   .ActiveVisitors { 
-    margin: 8px;
-    text-align: center;
     padding: 0.5em;
     border: solid;
+    text-align: center;
+    grid-area: ActiveVisitors; 
   }
   
   .AvgVisitDuration { 
-    margin: 8px;
+    padding: 0.5em;
+    border: solid;
     text-align: center;
-    padding: 0.5em;
-    border: solid;
+    grid-area: AvgVisitDuration; 
   }
   
-  .Devices {
-    margin: 8px;
+  .VisitsByCountry { 
     padding: 0.5em;
     border: solid;
+    text-align: center;
+    grid-area: VisitsByCountry; 
   }
   
-  
-  .VisitsByCountry {
-    margin: 8px;
+  .Devices { 
     padding: 0.5em;
     border: solid;
+    text-align: center;
+    grid-area: Devices; 
   }
   
   .TopPages { 
-    margin: 8px;
     padding: 0.5em;
     border: solid;
+    text-align: center;
+    grid-area: TopPages; 
   }
   
   .HoursOfActivityPerDay { 
-    margin: 8px;
     padding: 0.5em;
     border: solid;
+    text-align: center;
+    grid-area: HoursOfActivityPerDay; 
   }
   
-  .NewVsReturn {
-    margin: 8px;
+  .NewVsReturn { 
     padding: 0.5em;
     border: solid;
+    text-align: center;
+    grid-area: NewVsReturn; 
   }
+  
+  .Referrer { 
+    padding: 0.5em;
+    border: solid;
+    text-align: center;
+    grid-area: Referrer; 
+  }  
 }
+
+@media (500px <= width < 1250px) {
+  .container { 
+    padding: 7px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 7px 7px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "About About"
+      "ActiveVisitors AvgVisitDuration"
+      "Devices VisitsByCountry"
+      "Referrer Referrer"
+      "TopPages TopPages"
+      "NewVsReturn NewVsReturn"
+      "HoursOfActivityPerDay HoursOfActivityPerDay";
+  }
+  
+  .About { 
+    padding: 0.5em;
+    border: solid;
+    text-align: center;
+    grid-area: About; 
+  }
+  
+  .ActiveVisitors { 
+    padding: 0.5em;
+    border: solid;
+    text-align: center;
+    grid-area: ActiveVisitors; 
+  }
+  
+  .AvgVisitDuration { 
+    padding: 0.5em;
+    border: solid;
+    text-align: center;
+    grid-area: AvgVisitDuration; 
+  }
+  
+  .VisitsByCountry { 
+    padding: 0.5em;
+    border: solid;
+    text-align: center;
+    grid-area: VisitsByCountry; 
+  }
+  
+  .Devices { 
+    padding: 0.5em;
+    border: solid;
+    text-align: center;
+    grid-area: Devices; 
+  }
+  
+  .TopPages { 
+    padding: 0.5em;
+    border: solid;
+    text-align: center;
+    grid-area: TopPages; 
+  }
+  
+  .HoursOfActivityPerDay { 
+    padding: 0.5em;
+    border: solid;
+    text-align: center;
+    grid-area: HoursOfActivityPerDay; 
+  }
+  
+  .NewVsReturn { 
+    padding: 0.5em;
+    border: solid;
+    text-align: center;
+    grid-area: NewVsReturn; 
+  }
+  
+  .Referrer { 
+    padding: 0.5em;
+    border: solid;
+    text-align: center;
+    grid-area: Referrer; 
+  }  
+}
+
+.About { 
+  padding: 0.5em;
+  border: solid;
+  text-align: center;
+}
+
+.ActiveVisitors { 
+  padding: 0.5em;
+  border: solid;
+  text-align: center;
+}
+
+.AvgVisitDuration { 
+  padding: 0.5em;
+  border: solid;
+  text-align: center;
+}
+
+.VisitsByCountry { 
+  padding: 0.5em;
+  border: solid;
+  text-align: center;
+}
+
+.Devices { 
+  padding: 0.5em;
+  border: solid;
+  text-align: center;
+}
+
+.TopPages { 
+  padding: 0.5em;
+  border: solid;
+  text-align: center;
+}
+
+.HoursOfActivityPerDay { 
+  padding: 0.5em;
+  border: solid;
+  text-align: center;
+}
+
+.NewVsReturn { 
+  padding: 0.5em;
+  border: solid;
+  text-align: center;
+}
+
+.Referrer { 
+  padding: 0.5em;
+  border: solid;
+  text-align: center;
+} 
