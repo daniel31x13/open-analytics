@@ -7,6 +7,7 @@ import TopPages from './component/TopPages';
 import VisitsByCountry from './component/VisitsByCountry';
 import HoursOfActivityPerDay from './component/HoursOfActivityPerDay';
 import About from './component/About';
+import Referrer from './component/Referrer';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Devices />
       <VisitsByCountry />
       <TopPages />
+      <Referrer />
       <HoursOfActivityPerDay />
       <NewVsReturn />
     </div>

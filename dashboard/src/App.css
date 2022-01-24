@@ -1,67 +1,74 @@
 @media (min-width: 900px) {
-  .container {  display: grid;
-    grid-template-columns: 0.7fr 0.7fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 0.5em 0.5em;
+  .container {
+    padding: 7px;
     height: 97vh;
-    padding: 8px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "About About ActiveVisitors AvgVisitDuration NewVsReturn NewVsReturn"
-      "VisitsByCountry VisitsByCountry HoursOfActivityPerDay HoursOfActivityPerDay NewVsReturn NewVsReturn"
-      "Devices Devices HoursOfActivityPerDay HoursOfActivityPerDay TopPages TopPages";
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 7px;
+    grid-row-gap: 7px;
   }
   
   .About {
     padding: 0.5em;
-    grid-area: About;
+    grid-area: 1 / 1 / 2 / 2;
     border: solid;
     text-align: center;
   }
+
+  .About p {
+    font-size: x-small;
+  }
   
-  .ActiveVisitors { 
+  .ActiveVisitors {
+    grid-area: 1 / 2 / 2 / 3; 
     text-align: center;
     padding: 0.5em;
-    grid-area: ActiveVisitors;
     border: solid;
   }
   
-  .AvgVisitDuration { 
+  .AvgVisitDuration {
+    grid-area: 2 / 2 / 3 / 3; 
     text-align: center;
     padding: 0.5em;
     border: solid;
-    grid-area: AvgVisitDuration; 
   }
   
   .Devices {
+    grid-area: 4 / 1 / 6 / 2;
     padding: 0.5em;
-    grid-area: Devices; 
     border: solid;
   }
   
   
   .VisitsByCountry {
+    grid-area: 2 / 1 / 4 / 2;
     padding: 0.5em;
     border: solid;
-    grid-area: VisitsByCountry; 
   }
   
   .TopPages { 
+    grid-area: 4 / 4 / 6 / 6;
     padding: 0.5em;
-    grid-area: TopPages; 
     border: solid;
   }
   
-  .HoursOfActivityPerDay { 
+  .HoursOfActivityPerDay {
+    grid-area: 3 / 2 / 6 / 4;
     padding: 0.5em;
     border: solid;
-    grid-area: HoursOfActivityPerDay; 
   }
   
   .NewVsReturn {
+    grid-area: 1 / 4 / 4 / 6; 
     padding: 0.5em;
     border: solid;
-    grid-area: NewVsReturn; 
+  }
+
+  .Referrer {
+    grid-area: 1 / 3 / 3 / 4;
+    padding: 0.5em;
+    border: solid;
   }
 }
 
