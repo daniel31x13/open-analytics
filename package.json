@@ -1,6 +1,6 @@
 {
-  "name": "open-analytics-core-http",
-  "version": "1.0.0",
+  "name": "open-analytics-core",
+  "version": "1.1.0",
   "description": "Get real-time online users and save the data to MongoDB database",
   "main": "index.js",
   "scripts": {

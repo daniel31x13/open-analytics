@@ -1,7 +1,9 @@
+const assignUser = require('./lib/assignUser');
 const geoip = require('fast-geoip');
 const express = require('express');
 const { MongoClient } = require('mongodb');
 const app = express();
+
 const http = require('http').createServer(app);
 const io = require('socket.io')(http, {
     cors: {
@@ -23,22 +25,7 @@ io.on('connection', async (socket) => { // On connection
     let clientHeader = socket.request.headers['user-agent'];
     let geo = await geoip.lookup(clientIp.slice(7)); // Check location by ip (Does not work for local ip addresses)
     let clientURL;
-
-    function isMobile() { // Checks if client is mobile
-        const toMatch = [
-            /Android/i,
-            /webOS/i,
-            /iPhone/i,
-            /iPad/i,
-            /iPod/i,
-            /BlackBerry/i,
-            /Windows Phone/i
-        ];
-        
-        return toMatch.some((toMatchItem) => {
-            return clientHeader.match(toMatchItem);
-        });
-    }
+    let clientReferrer;
 
     totalClients.push(clientIp); // Add user to array
 
@@ -51,29 +38,22 @@ io.on('connection', async (socket) => { // On connection
     console.log('Total Clients: ' + count);
 
     io.emit('socketClientID', socket.client.id);
-    socket.on('clientMessage', (url) => { // Get url from client
-        clientURL = url;
+    socket.on('clientMessage', (data) => { // Get url from client
+        clientURL = data.url;
+        clientReferrer = data.referrer;
     });
 
-    socket.on('disconnect', async () => { // On disconnection
+    socket.on('disconnect', () => { // On disconnection
         const disconnectDate = new Date()
         let activeTime = Math.ceil((disconnectDate-connectDate)/1000).toString();
 
         totalClients.splice(totalClients.indexOf(clientIp), 1); // Remove user from array
         count = totalClients.filter(function(item, pos) { return totalClients.indexOf(item) == pos }).length; // Update the number of unique clients from the array
     
-        let user = { // Store client info in an object
-            "Ip": clientIp,
-            "Location": geo.country,
-            "User-Agent": clientHeader,
-            "IsMobile": isMobile(),
-            "Url": clientURL,
-            "Date": time,
-            "Active-Time(seconds)": activeTime
-        }
-    
+        let user = assignUser(clientIp, geo.country, clientHeader, clientURL, clientReferrer, time, activeTime);
+
         // Add to DB
-        await MClient.db("DatabaseName").collection("CollectionName").insertOne(user); // Edit 'DatabaseName' & 'CollectionName' accordingly
+        MClient.db("DatabaseName").collection("CollectionName").insertOne(user); // Edit 'DatabaseName' & 'CollectionName' accordingly
 
         console.clear(); // Clear previous log
         

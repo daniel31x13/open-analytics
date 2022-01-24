@@ -13,7 +13,7 @@
 <script>
     const socket = io("http://example.com:8080");
     socket.on('socketClientID', function (socketClientID) {
-        socket.emit('clientMessage', window.location.href);
+        socket.emit('clientMessage', {url: window.location.href, referrer: document.referrer});
     });
 </script>
 
