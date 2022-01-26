@@ -2,7 +2,8 @@ import React from 'react';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
 
-const Devices = () => {
+const Devices = (props) => {
+  console.log(props.data)
   const data = {
     labels: ['Mobile/Tablet', 'Desktop'],
     datasets: [

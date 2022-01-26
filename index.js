@@ -11,6 +11,8 @@ const io = require('socket.io')(http, {
     }
 });
 
+const cors = require('cors');
+
 const PORT = process.env.PORT || 8080; // Edit port if needed
 let count;
 let totalClients = [];
@@ -19,6 +21,17 @@ let totalClients = [];
 const uri = "mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false"; // Edit accordingly
 const MClient = new MongoClient(uri);
 MClient.connect().catch(console.error);
+
+let results;
+app.use(async (req, res, next) => {
+    let threeMonthBefore = new Date(new Date().getFullYear(), new Date().getMonth() - 3, new Date().getDate());
+    results = await MClient.db("DatabaseName").collection("CollectionName").find({Date: {$gt: threeMonthBefore}}).toArray(); // Edit 'DatabaseName' & 'CollectionName' accordingly
+    next();
+});
+
+app.get('/api', cors(), (req, res) => {
+    res.send(results);
+});
 
 io.on('connection', async (socket) => { // On connection
     let clientIp = socket.request.connection.remoteAddress;
@@ -31,8 +44,7 @@ io.on('connection', async (socket) => { // On connection
 
     count = totalClients.filter(function(item, pos) { return totalClients.indexOf(item) == pos }).length; // The number of unique clients from the array
 
-    const connectDate = new Date()
-    let time = connectDate.toString();
+    const connectDate = new Date();
 
     console.clear(); // Clear previous log
     console.log('Total Clients: ' + count);
@@ -50,7 +62,7 @@ io.on('connection', async (socket) => { // On connection
         totalClients.splice(totalClients.indexOf(clientIp), 1); // Remove user from array
         count = totalClients.filter(function(item, pos) { return totalClients.indexOf(item) == pos }).length; // Update the number of unique clients from the array
     
-        let user = assignUser(clientIp, geo.country, clientHeader, clientURL, clientReferrer, time, activeTime);
+        let user = assignUser(clientIp, geo.country, clientHeader, clientURL, clientReferrer, connectDate, activeTime);
 
         // Add to DB
         MClient.db("DatabaseName").collection("CollectionName").insertOne(user); // Edit 'DatabaseName' & 'CollectionName' accordingly
@@ -62,5 +74,6 @@ io.on('connection', async (socket) => { // On connection
 });
 
 http.listen(PORT, () => {
+    console.clear();
     console.log("ALL SET!");
 });

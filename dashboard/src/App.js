@@ -9,13 +9,30 @@ import HoursOfActivityPerDay from './component/HoursOfActivityPerDay';
 import About from './component/About';
 import Referrer from './component/Referrer';
 
+let stats;
+let devices = [];
+
+async function getStats() {
+  const response = await fetch('http://192.168.1.4:8080/api');
+  const data = await response.json();
+  stats = data;
+  getDevices();
+}
+
+function getDevices() {
+  stats.forEach(entity => {
+    devices.push(entity.IsMobile);
+  });
+}
+
 function App() {
+  getStats();
   return (
     <div className='container'>
       <About />
       <ActiveVisitors />
       <AvgVisitDuration />
-      <Devices />
+      <Devices data={devices} />
       <VisitsByCountry />
       <TopPages />
       <Referrer />
