@@ -32,10 +32,10 @@ function App() {
     <div className='container'>
       <About />
       <ActiveVisitors />
-      <AvgVisitDuration />
+      <AvgVisitDuration time={stats} />
       <Devices devices={stats} />
       <VisitsByCountry location={stats} />
-      <TopPages />
+      <TopPages pages={stats} />
       <Referrer links={stats} />
       <HoursOfActivityPerDay />
       <NewVsReturn />

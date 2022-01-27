@@ -64,7 +64,7 @@ const VisitsByCountry = ({location}) => {
         data={data} 
         options={{ 
           maintainAspectRatio: false, 
-          plugins: { title: { display: true, text: 'VIsits by each country:' }}
+          plugins: { title: { display: true, text: 'Visits by each country:' }}
         }}
         />
   </div> );
