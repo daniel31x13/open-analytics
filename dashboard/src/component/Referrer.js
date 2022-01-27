@@ -10,7 +10,7 @@ import {
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 
-const Referrer = () => {
+const Referrer = ({ links }) => {
   const labels = ['/home1', '/samplePage1', '/anotherSamplePage2', '/alsoAnotheSamplePage2', 'lastSamplePage3'];
 
   const data = {

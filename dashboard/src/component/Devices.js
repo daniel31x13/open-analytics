@@ -1,15 +1,35 @@
-import React from 'react';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
 
-const Devices = (props) => {
-  console.log(props.data)
+const Devices = ({devices}) => {
+  function getDevicesKeys() {
+    const Devices = devices.map((entity) => {return entity.IsMobile});
+  
+    let deviceStats = Devices.reduce((a, b) => a.set(b, (a.get(b) || 0) + 1), new Map());
+    let devicesKeys = [...deviceStats.keys()];
+    // let devicesValues = [...deviceStats.values()];
+    // let devicesEntries = [...deviceStats.entries()];
+
+    return devicesKeys;
+  }
+
+  function getDevicesValue() {
+    const Devices = devices.map((entity) => {return entity.IsMobile});
+  
+    let deviceStats = Devices.reduce((a, b) => a.set(b, (a.get(b) || 0) + 1), new Map());
+    // let devicesKeys = [...deviceStats.keys()];
+    let devicesValues = [...deviceStats.values()];
+    // let devicesEntries = [...deviceStats.entries()];
+
+    return devicesValues;
+  }  
+
   const data = {
-    labels: ['Mobile/Tablet', 'Desktop'],
+    labels: getDevicesKeys(),
     datasets: [
       {
         label: 'Devices',
-        data: [12, 19],
+        data: getDevicesValue(),
         backgroundColor: [
           'rgba(255, 99, 132, 0.8)',
           'rgba(54, 162, 235, 0.8)',
@@ -25,7 +45,7 @@ const Devices = (props) => {
         data={data} 
         options={{ 
           maintainAspectRatio: false, 
-          plugins: { title: { display: true, text: 'Mobile/tablet users against desktop users:' }}
+          plugins: { title: { display: true, text: 'Users were using Mobile/tablet?' }}
         }}
         />
     </div> );

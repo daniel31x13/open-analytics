@@ -24,7 +24,7 @@ MClient.connect().catch(console.error);
 
 let results;
 app.use(async (req, res, next) => {
-    let threeMonthBefore = new Date(new Date().getFullYear(), new Date().getMonth() - 3, new Date().getDate());
+    let threeMonthBefore = new Date(new Date().getFullYear(), new Date().getMonth() - 1, new Date().getDate());
     results = await MClient.db("DatabaseName").collection("CollectionName").find({Date: {$gt: threeMonthBefore}}).toArray(); // Edit 'DatabaseName' & 'CollectionName' accordingly
     next();
 });
