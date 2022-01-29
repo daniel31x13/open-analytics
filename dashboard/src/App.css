@@ -17,7 +17,7 @@
   
   .About { 
     padding: 0.5em;
-    border: solid;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     text-align: center;
     grid-area: About; 
   }
@@ -28,56 +28,56 @@
 
   .ActiveVisitors { 
     padding: 0.5em;
-    border: solid;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     text-align: center;
     grid-area: ActiveVisitors; 
   }
   
   .AvgVisitDuration { 
     padding: 0.5em;
-    border: solid;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     text-align: center;
     grid-area: AvgVisitDuration; 
   }
   
   .VisitsByCountry { 
     padding: 0.5em;
-    border: solid;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     text-align: center;
     grid-area: VisitsByCountry; 
   }
   
   .Devices { 
     padding: 0.5em;
-    border: solid;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     text-align: center;
     grid-area: Devices; 
   }
   
   .TopPages { 
     padding: 0.5em;
-    border: solid;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     text-align: center;
     grid-area: TopPages; 
   }
   
   .HoursOfActivityPerDay { 
     padding: 0.5em;
-    border: solid;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     text-align: center;
     grid-area: HoursOfActivityPerDay; 
   }
   
   .NewVsReturn { 
     padding: 0.5em;
-    border: solid;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     text-align: center;
     grid-area: NewVsReturn; 
   }
   
   .Referrer { 
     padding: 0.5em;
-    border: solid;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     text-align: center;
     grid-area: Referrer; 
   }  
@@ -103,63 +103,63 @@
   
   .About { 
     padding: 0.5em;
-    border: solid;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     text-align: center;
     grid-area: About; 
   }
   
   .ActiveVisitors { 
     padding: 0.5em;
-    border: solid;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     text-align: center;
     grid-area: ActiveVisitors; 
   }
   
   .AvgVisitDuration { 
     padding: 0.5em;
-    border: solid;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     text-align: center;
     grid-area: AvgVisitDuration; 
   }
   
   .VisitsByCountry { 
     padding: 0.5em;
-    border: solid;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     text-align: center;
     grid-area: VisitsByCountry; 
   }
   
   .Devices { 
     padding: 0.5em;
-    border: solid;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     text-align: center;
     grid-area: Devices; 
   }
   
   .TopPages { 
     padding: 0.5em;
-    border: solid;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     text-align: center;
     grid-area: TopPages; 
   }
   
   .HoursOfActivityPerDay { 
     padding: 0.5em;
-    border: solid;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     text-align: center;
     grid-area: HoursOfActivityPerDay; 
   }
   
   .NewVsReturn { 
     padding: 0.5em;
-    border: solid;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     text-align: center;
     grid-area: NewVsReturn; 
   }
   
   .Referrer { 
     padding: 0.5em;
-    border: solid;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     text-align: center;
     grid-area: Referrer; 
   }  
@@ -167,54 +167,54 @@
 
 .About { 
   padding: 0.5em;
-  border: solid;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   text-align: center;
 }
 
 .ActiveVisitors { 
   padding: 0.5em;
-  border: solid;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   text-align: center;
 }
 
 .AvgVisitDuration { 
   padding: 0.5em;
-  border: solid;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   text-align: center;
 }
 
 .VisitsByCountry { 
   padding: 0.5em;
-  border: solid;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   text-align: center;
 }
 
 .Devices { 
   padding: 0.5em;
-  border: solid;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   text-align: center;
 }
 
 .TopPages { 
   padding: 0.5em;
-  border: solid;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   text-align: center;
 }
 
 .HoursOfActivityPerDay { 
   padding: 0.5em;
-  border: solid;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   text-align: center;
 }
 
 .NewVsReturn { 
   padding: 0.5em;
-  border: solid;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   text-align: center;
 }
 
 .Referrer { 
   padding: 0.5em;
-  border: solid;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   text-align: center;
 } 

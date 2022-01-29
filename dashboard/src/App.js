@@ -10,12 +10,6 @@ import HoursOfActivityPerDay from './component/HoursOfActivityPerDay';
 import About from './component/About';
 import Referrer from './component/Referrer';
 
-let response;
-let devices = [];
-
-let devicesKeys = [];
-let devicesValues = [];
-
 function App() {
   const [stats, setStats] = useState([]);
 
@@ -23,7 +17,7 @@ function App() {
     async function fetchStats() {
       const res = await fetch('http://192.168.1.4:8080/api');
       const data = await res.json();
-      await setStats(data);
+      setStats(data);
     }
     fetchStats();
   }, []);
@@ -37,7 +31,8 @@ function App() {
       <VisitsByCountry location={stats} />
       <TopPages pages={stats} />
       <Referrer links={stats} />
-      <HoursOfActivityPerDay />
+      <HoursOfActivityPerDay activity={stats} />
+      
       <NewVsReturn />
     </div>
   );
