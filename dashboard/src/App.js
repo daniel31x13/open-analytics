@@ -12,6 +12,7 @@ import Referrer from './component/Referrer';
 
 function App() {
   const [stats, setStats] = useState([]);
+  const [active, setActive] = useState(0);
 
   useEffect(() => {
     async function fetchStats() {
@@ -20,20 +21,25 @@ function App() {
       setStats(data);
     }
     fetchStats();
+    async function fetchActiveUsers() {
+      const res = await fetch('http://192.168.1.4:8080/api/active');
+      const data = await res.text();
+      setActive(parseInt(data));
+    }
+    fetchActiveUsers();
   }, []);
   
   return (
     <div className='container'>
       <About />
-      <ActiveVisitors />
+      <ActiveVisitors active={active} />
       <AvgVisitDuration time={stats} />
       <Devices devices={stats} />
       <VisitsByCountry location={stats} />
       <TopPages pages={stats} />
       <Referrer links={stats} />
       <HoursOfActivityPerDay activity={stats} />
-      
-      <NewVsReturn />
+      <NewVsReturn users={stats} />
     </div>
   );
 }

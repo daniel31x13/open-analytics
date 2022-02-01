@@ -44,7 +44,7 @@ const Devices = ({devices}) => {
       <Pie 
         data={data} 
         options={{ 
-          maintainAspectRatio: false, 
+          maintainAspectRatio: false,
           plugins: { title: { display: true, text: 'Users were using Mobile/tablet?' }}
         }}
         />

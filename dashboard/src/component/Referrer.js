@@ -67,7 +67,6 @@ const Referrer = ({ links }) => {
     <Bar 
         data={data} 
         options={{ 
-          maintainAspectRatio: false, 
           plugins: { title: { display: true, text: 'Coming from:' }}
         }}
       />

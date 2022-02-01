@@ -68,7 +68,6 @@ const TopPages = ({pages}) => {
     <Bar 
         data={data} 
         options={{ 
-          maintainAspectRatio: false, 
           plugins: { title: { display: true, text: 'Top 5 most visited links:' }}
         }}
       />

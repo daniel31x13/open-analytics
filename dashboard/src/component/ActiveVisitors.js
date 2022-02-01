@@ -1,8 +1,9 @@
-const ActiveVisitors = () => {
+const ActiveVisitors = ({active}) => {
   return (
   <div className="ActiveVisitors">
       Right now:
-      <h1>17</h1>
+      <h1>{active}</h1>
+      Active Users
   </div>
   );
 };

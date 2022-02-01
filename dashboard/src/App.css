@@ -1,4 +1,4 @@
-@media (min-width: 1250px) {
+/* @media (min-width: 1250px) {
   .container {
     height: 97vh;
     display: grid;
@@ -81,90 +81,92 @@
     text-align: center;
     grid-area: Referrer; 
   }  
+} */
+
+.container {
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 7% 5% 10% 20% 20% 20% 20%;
+  gap: 7px 7px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "About About"
+    "ActiveVisitors AvgVisitDuration"
+    "Devices VisitsByCountry"
+    "Referrer Referrer"
+    "TopPages TopPages"
+    "NewVsReturn NewVsReturn"
+    "HoursOfActivityPerDay HoursOfActivityPerDay";
 }
 
-@media (500px <= width < 1250px) {
-  .container { 
-    padding: 7px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 7px 7px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "About About"
-      "ActiveVisitors AvgVisitDuration"
-      "Devices VisitsByCountry"
-      "Referrer Referrer"
-      "TopPages TopPages"
-      "NewVsReturn NewVsReturn"
-      "HoursOfActivityPerDay HoursOfActivityPerDay";
-  }
-  
-  .About { 
-    padding: 0.5em;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    text-align: center;
-    grid-area: About; 
-  }
-  
-  .ActiveVisitors { 
-    padding: 0.5em;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    text-align: center;
-    grid-area: ActiveVisitors; 
-  }
-  
-  .AvgVisitDuration { 
-    padding: 0.5em;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    text-align: center;
-    grid-area: AvgVisitDuration; 
-  }
-  
-  .VisitsByCountry { 
-    padding: 0.5em;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    text-align: center;
-    grid-area: VisitsByCountry; 
-  }
-  
-  .Devices { 
-    padding: 0.5em;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    text-align: center;
-    grid-area: Devices; 
-  }
-  
-  .TopPages { 
-    padding: 0.5em;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    text-align: center;
-    grid-area: TopPages; 
-  }
-  
-  .HoursOfActivityPerDay { 
-    padding: 0.5em;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    text-align: center;
-    grid-area: HoursOfActivityPerDay; 
-  }
-  
-  .NewVsReturn { 
-    padding: 0.5em;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    text-align: center;
-    grid-area: NewVsReturn; 
-  }
-  
-  .Referrer { 
-    padding: 0.5em;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    text-align: center;
-    grid-area: Referrer; 
-  }  
+.About { 
+  padding: 0.5em;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  text-align: center;
+  grid-area: About; 
 }
 
+.ActiveVisitors { 
+  padding: 0.5em;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  text-align: center;
+  grid-area: ActiveVisitors; 
+}
+
+.AvgVisitDuration { 
+  padding: 0.5em;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  text-align: center;
+  grid-area: AvgVisitDuration; 
+}
+
+.VisitsByCountry { 
+  padding: 0.5em;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  text-align: center;
+  grid-area: VisitsByCountry; 
+}
+
+.Devices { 
+  padding: 0.5em;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  text-align: center;
+  grid-area: Devices; 
+}
+
+.TopPages { 
+  padding: 0.5em;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  text-align: center;
+  grid-area: TopPages; 
+}
+
+.HoursOfActivityPerDay { 
+  padding: 0.5em;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  text-align: center;
+  grid-area: HoursOfActivityPerDay; 
+}
+
+.NewVsReturn { 
+  padding: 0.5em;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  text-align: center;
+  grid-area: NewVsReturn; 
+}
+
+.Referrer { 
+  padding: 0.5em;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  text-align: center;
+  grid-area: Referrer; 
+}  
+
+/* 
 .About { 
   padding: 0.5em;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -217,4 +219,4 @@
   padding: 0.5em;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   text-align: center;
-} 
+}  */

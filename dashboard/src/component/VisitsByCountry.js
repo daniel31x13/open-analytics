@@ -63,7 +63,7 @@ const VisitsByCountry = ({location}) => {
     <Doughnut 
         data={data} 
         options={{ 
-          maintainAspectRatio: false, 
+          maintainAspectRatio: false,
           plugins: { title: { display: true, text: 'Visits by each country:' }}
         }}
         />
