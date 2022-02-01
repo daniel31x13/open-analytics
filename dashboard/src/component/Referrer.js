@@ -64,10 +64,10 @@ const Referrer = ({ links }) => {
   };
 
   return ( <div className='Referrer'>
+    <h2>Coming from:</h2>
     <Bar 
         data={data} 
-        options={{ 
-          plugins: { title: { display: true, text: 'Coming from:' }}
+        options={{ borderRadius: 5, tension: 0.3
         }}
       />
   </div> );

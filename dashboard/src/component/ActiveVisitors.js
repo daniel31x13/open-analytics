@@ -2,7 +2,7 @@ const ActiveVisitors = ({active}) => {
   return (
   <div className="ActiveVisitors">
       Right now:
-      <h1>{active}</h1>
+      <h2>{active}</h2>
       Active Users
   </div>
   );

@@ -2,10 +2,10 @@ import React from 'react';
 
 const About = () => {
   return ( <div className='About'>
-      <h3>Open Analytics</h3>
-      <h6>By Daniel31X13</h6>
+      <h1>Open Analytics</h1>
+      <h5>By Daniel31X13</h5>
       <p>A somewhat "minimalist" SEO analytic for your website.</p>
-      <p>Check out my <a href='https://github.com/Daniel31x13' target='_blank'>GitHub</a>!</p>
+      <p>Check it out on my <a href='https://github.com/Daniel31x13' target='_blank' className='rainbowEffect'>GitHub!</a></p>
   </div> );
 };
 

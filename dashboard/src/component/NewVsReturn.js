@@ -87,11 +87,9 @@ const NewVsReturn = ({users}) => {
   };
  
   return ( <div className='NewVsReturn'>
+    <h2>New versus returning users:</h2>
       <Line 
-        data={data} 
-        options={{  
-          plugins: { title: { display: true, text: 'New versus returning users:' }}
-        }}
+        data={data}
         />
     </div> );
 };

@@ -44,10 +44,10 @@ const HoursOfActivityPerDay = ({ activity }) => {
   };
 
   return ( <div className='HoursOfActivityPerDay'>
+    <h2>Activity per day:</h2>
     <Bar 
         data={data} 
-        options={{ 
-          plugins: { title: { display: true, text: 'Activity per day:' }}
+        options={{ borderRadius: 5
         }}
       />
   </div> );

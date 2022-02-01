@@ -65,10 +65,10 @@ const TopPages = ({pages}) => {
   };
 
   return ( <div className='TopPages'>
+    <h2>Top 5 most visited links:</h2>
     <Bar 
         data={data} 
-        options={{ 
-          plugins: { title: { display: true, text: 'Top 5 most visited links:' }}
+        options={{ borderRadius: 5
         }}
       />
   </div> );

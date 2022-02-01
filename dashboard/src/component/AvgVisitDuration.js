@@ -8,7 +8,7 @@ const AvgVisitDuration = ({ time }) => {
     return (Math.round(average * 100) / 100).toString();
   }
 
-  return <div className='AvgVisitDuration'>Average time on each page: <h1>{getAvg()}</h1> Seconds</div>;
+  return <div className='AvgVisitDuration'>Average time on each page: <h2>{getAvg()}</h2> Seconds</div>;
 };
 
 export default AvgVisitDuration;
