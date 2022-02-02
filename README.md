@@ -15,7 +15,7 @@ So like its predecessor it logs the following to a MongoDB database:
 
 ### Demo
 
-<img src="assets/demo.gif" width="65%">
+<img src="assets/demo.gif" width="75%">
 
 ------------
 ### Requirements
