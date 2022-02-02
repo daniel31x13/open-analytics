@@ -15,9 +15,9 @@
     if(document.cookie) {
     	isFirstTime = false
     } else {
-        document.cookie = "name=Visited;path=/";
+        document.cookie = "name=hasVisited;path=/";
     }
-    const socket = io("http://example.com:8080");
+    const socket = io("http://192.168.1.4:8080");
     socket.on('socketClientID', function (socketClientID) {
         socket.emit('clientMessage', {url: window.location.href, referrer: document.referrer, isFirstVisit: isFirstTime});
     });
