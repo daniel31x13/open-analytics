@@ -15,7 +15,7 @@ So like its predecessor it logs the following to a MongoDB database:
 
 ### Demo
 
-![alt demo](assets/demo.gif)
+<img src="assets/demo.gif" width="50%">
 
 ------------
 ### Requirements
