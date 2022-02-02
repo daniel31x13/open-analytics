@@ -2,7 +2,7 @@ const ActiveVisitors = ({active}) => {
   return (
   <div className="ActiveVisitors">
       Right now:
-      <h2>{active}</h2>
+      <h2>{active.toString()}</h2>
       Active Users
   </div>
   );

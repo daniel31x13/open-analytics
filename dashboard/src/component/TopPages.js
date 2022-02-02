@@ -65,10 +65,9 @@ const TopPages = ({pages}) => {
   };
 
   return ( <div className='TopPages'>
-    <h2>Top 5 most visited links:</h2>
     <Bar 
         data={data} 
-        options={{ borderRadius: 5
+        options={{maintainAspectRatio: false, indexAxis: 'y', borderRadius: 5, plugins: { title: { display: true, text: 'Top visited links:' }}
         }}
       />
   </div> );

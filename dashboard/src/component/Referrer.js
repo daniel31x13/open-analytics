@@ -25,8 +25,15 @@ const Referrer = ({ links }) => {
       };
     })(1));
 
-    const sortedTop = topEntries.map((i) => { return i[0] });
-    
+    let sortedTop = topEntries.map((i) => { return i[0] });
+    sortedTop = sortedTop.map((i) => { 
+      if(i == "") {
+        return 'Browser';
+    } 
+    else {
+        return i;
+      }
+    });
     return sortedTop;
   }
 
@@ -64,10 +71,9 @@ const Referrer = ({ links }) => {
   };
 
   return ( <div className='Referrer'>
-    <h2>Coming from:</h2>
     <Bar 
         data={data} 
-        options={{ borderRadius: 5, tension: 0.3
+        options={{maintainAspectRatio: false, indexAxis: 'y', borderRadius: 5, tension: 0.3, plugins: { title: { display: true, text: 'Coming from:' }}
         }}
       />
   </div> );

@@ -4,7 +4,7 @@ const About = () => {
   return ( <div className='About'>
       <h1>Open Analytics</h1>
       <h5>By Daniel31X13</h5>
-      <p>A somewhat "minimalist" SEO analytic for your website.</p>
+      <p>A somewhat "Minimalist" SEO analytic for your website.</p>
       <p>Check it out on my <a href='https://github.com/Daniel31x13' target='_blank' className='rainbowEffect'>GitHub!</a></p>
   </div> );
 };

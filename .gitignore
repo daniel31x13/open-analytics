@@ -5,7 +5,7 @@ node_modules
 # dependencies
 dashboard/node_modules
 dashboard/.pnp
-dashboard.pnp.js
+dashboard/.pnp.js
 
 # testing
 dashboard/coverage
@@ -14,12 +14,12 @@ dashboard/coverage
 dashboard/build
 
 # misc
-dashboard.DS_Store
-dashboard.env.local
-dashboard.env.development.local
-dashboard.env.test.local
-dashboard.env.production.local
+dashboard/.DS_Store
+dashboard/.env.local
+dashboard/.env.development.local
+dashboard/.env.test.local
+dashboard/.env.production.local
 
-dashboardnpm-debug.log*
-dashboardyarn-debug.log*
-dashboardyarn-error.log*
+dashboard/npm-debug.log*
+dashboard/yarn-debug.log*
+dashboard/yarn-error.log*

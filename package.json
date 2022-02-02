@@ -5,18 +5,18 @@
   "main": "index.js",
   "scripts": {
     "start": "node index",
-    "dev": "nodemon index"
+    "dev": "concurrently --kill-others \"node index\" \"cd dashboard && npm start\""
   },
   "author": "Daniel",
   "license": "MIT",
-  "devDependencies": {
-    "nodemon": "^2.0.15"
-  },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "fast-geoip": "^1.1.54",
     "mongodb": "^4.3.0",
     "socket.io": "^4.4.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0"
   }
 }

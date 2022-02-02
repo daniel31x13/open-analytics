@@ -2,25 +2,20 @@
   .container {
     padding-left: 20%;
     padding-right: 20%;
-    padding-top: 2px;
-    padding-bottom: 3px;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto 10% 20% 20% 20% 20%;
+    grid-template-rows: auto auto 13% 20% 25% 25%;
     gap: 20px 20px;
     grid-auto-flow: row;
     grid-template-areas:
       "About About"
       "ActiveVisitors AvgVisitDuration"
       "Devices VisitsByCountry"
-      "Referrer Referrer"
-      "TopPages TopPages"
+      "Referrer TopPages"
       "NewVsReturn NewVsReturn"
       "HoursOfActivityPerDay HoursOfActivityPerDay";
-  }
-  
-  h2 {
-    font-weight: 400;
   }
 
   .About { 
@@ -32,6 +27,13 @@
   }
   
   .rainbowEffect {
+    font-size: 1.5em;
+    font-weight: 700;
+    text-decoration: underline;
+    font-family: monospace;
+  }
+
+  .rainbowEffect:hover {
     font-size: 1.5em;
     font-weight: 700;
     text-decoration: none;
@@ -140,25 +142,20 @@
   .container {
     padding-left: 5%;
     padding-right: 5%;
-    padding-top: 2px;
-    padding-bottom: 3px;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto 10% 20% 20% 20% 20%;
+    grid-template-rows: auto auto 13% 20% 25% 25%;
     gap: 20px 20px;
     grid-auto-flow: row;
     grid-template-areas:
       "About About"
       "ActiveVisitors AvgVisitDuration"
       "Devices VisitsByCountry"
-      "Referrer Referrer"
-      "TopPages TopPages"
+      "Referrer TopPages"
       "NewVsReturn NewVsReturn"
       "HoursOfActivityPerDay HoursOfActivityPerDay";
-  }
-  
-  h2 {
-    font-weight: 400;
   }
 
   .About { 
@@ -169,6 +166,39 @@
     grid-area: About; 
   }
   
+  .rainbowEffect {
+    font-size: 1.5em;
+    font-weight: 700;
+    text-decoration: underline;
+    font-family: monospace;
+  }
+
+  .rainbowEffect:hover {
+    font-size: 1.5em;
+    font-weight: 700;
+    text-decoration: none;
+    font-family: monospace;
+    animation: colorRotate 5s linear 0s infinite;
+  }
+  
+  @keyframes colorRotate {
+    from {
+      color: #6666ff;
+    }
+    10% {
+      color: #0099ff;
+    }
+    50% {
+      color: #00ff00;
+    }
+    75% {
+      color: #ff3399;
+    }
+    100% {
+      color: #6666ff;
+    }
+  }
+
   .About h1 {
     font-weight: 300;
     color: #444444;
@@ -246,60 +276,3 @@
     grid-area: Referrer; 
   }  
 }
-
-
-
-/* 
-.About { 
-  padding: 0.5em;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  text-align: center;
-}
-
-.ActiveVisitors { 
-  padding: 0.5em;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  text-align: center;
-}
-
-.AvgVisitDuration { 
-  padding: 0.5em;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  text-align: center;
-}
-
-.VisitsByCountry { 
-  padding: 0.5em;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  text-align: center;
-}
-
-.Devices { 
-  padding: 0.5em;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  text-align: center;
-}
-
-.TopPages { 
-  padding: 0.5em;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  text-align: center;
-}
-
-.HoursOfActivityPerDay { 
-  padding: 0.5em;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  text-align: center;
-}
-
-.NewVsReturn { 
-  padding: 0.5em;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  text-align: center;
-}
-
-.Referrer { 
-  padding: 0.5em;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  text-align: center;
-}  */
