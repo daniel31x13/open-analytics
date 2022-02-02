@@ -15,7 +15,7 @@ So like its predecessor it logs the following to a MongoDB database:
 
 ### Demo
 
-![alt demo](https://i.imgur.com/0kLzHWj.png)
+![alt demo](assets/demo.gif)
 
 ------------
 ### Requirements
