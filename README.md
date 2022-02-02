@@ -29,7 +29,7 @@ These are the versions that I had so it **may** work on your PC if you had an ol
 ### Setup
 
 #### First Step
-Add this code to your client HTML page ([Example](clientExample.html "Example")):
+Add this code to your client HTML page ([Example](assets/clientExample.html "Example")):
 
 ```javascript
 <script src="https://cdn.socket.io/4.4.0/socket.io.js"></script>

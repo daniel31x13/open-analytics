@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+
+<script src="https://cdn.socket.io/4.4.0/socket.io.js"></script>
+<script>
+    let isFirstTime = true;
+    if(document.cookie) {
+    	isFirstTime = false
+    } else {
+        document.cookie = "name=hasVisited;path=/";
+    }
+    const socket = io("http://192.168.1.4:8080");
+    socket.on('socketClientID', function (socketClientID) {
+        socket.emit('clientMessage', {url: window.location.href, referrer: document.referrer, isFirstVisit: isFirstTime});
+    });
+</script>
+
+</body>
+</html>
