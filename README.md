@@ -98,4 +98,4 @@ https.listen(PORT, () => {
 ```
 
 #### Fifth Step
-Lastly change `const socket = io("ADDRESS");` to `const socket = io("ADDRESS", {secure: true});` where ever your using the [client script](clientExample.html "client script").
+Lastly change `const socket = io("ADDRESS");` to `const socket = io("ADDRESS", {secure: true});` where ever your using the [client script](assets/clientExample.html "client script").
