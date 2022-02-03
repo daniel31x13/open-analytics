@@ -1,8 +1,9 @@
 # Open Analytics
+
 ### A somewhat "Minimalist" SEO analytic for your website.
-
+![GitHub](https://img.shields.io/github/license/Daniel31x13/open-analytics)
+---
 This project is using the features of open-analytics-core and simply displaying them in a dashboard.
-
 So like its predecessor it logs the following to a MongoDB database:
 - #### Device Ip
 - #### User-agent
