@@ -2,6 +2,8 @@
 
 ### A somewhat "Minimalist" SEO analytic for your website.
 ![GitHub](https://img.shields.io/github/license/Daniel31x13/open-analytics)  ![GitHub top language](https://img.shields.io/github/languages/top/daniel31x13/open-analytics)  ![GitHub last commit](https://img.shields.io/github/last-commit/daniel31x13/open-analytics)  ![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/m/Daniel31x13/open-analytics)
+
+#### [Demo](https://open-analytics-demo.herokuapp.com/)
 ---
 This project is using the features of open-analytics-core and simply displaying them in a dashboard.
 So like its predecessor it logs the following to a MongoDB database:
@@ -23,8 +25,6 @@ And uses those data to visualize:
 - #### Top visited links
 - #### New vs returning users
 - #### Sum of all users activity per day
-
-### [Check out the demo](https://open-analytics-demo.herokuapp.com/)
 
 ------------
 ### Requirements
