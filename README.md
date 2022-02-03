@@ -13,9 +13,17 @@ So like its predecessor it logs the following to a MongoDB database:
 - #### Location
 - #### Referrer
 
-### Demo
+And uses those data to visualize:
+- #### Average time on each page
+- #### Current active users
+- #### Most used device (Mobile/Desktop)
+- #### Visits by each country
+- #### Websites most users are comming from
+- #### Top visited links
+- #### New vs returning users
+- #### Sum of all users activity per day
 
-<img src="assets/demo.gif" width="75%">
+### [Check out the demo](https://open-analytics-demo.herokuapp.com/)
 
 ------------
 ### Requirements
