@@ -1,4 +1,3 @@
-// Still big bug :(
 import 'chart.js/auto';
 import { Line } from "react-chartjs-2";
 
