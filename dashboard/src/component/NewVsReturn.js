@@ -10,11 +10,13 @@ const NewVsReturn = ({users}) => {
   });
 
   let Dates = rawData.map((entity) => {
-    const obj = entity.date;
+    const obj = entity.x;
     return obj;
   }).filter(entity => {return entity});
 
-  let uniqueDates = [...new Set(Dates)];
+  let uniqueDates = [...new Set(Dates)].sort((a, b) => {
+    return new Date(a) - new Date(b);
+  });
 
   function newUsers() {
     let rawUsers = rawData.filter((entity) => {
@@ -47,7 +49,6 @@ const NewVsReturn = ({users}) => {
     return rawUsers.filter((value, index, self) => index === self.findIndex((t) => t.x === value.x));
   }
 
-  console.log();
 
   const data = {
     labels: uniqueDates,
