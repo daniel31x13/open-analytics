@@ -1,13 +1,14 @@
 # Open Analytics
 
-### A somewhat "Minimalist" SEO analytic for your website.
+**A somewhat "Minimalist" SEO analytic for your website.**
+
 ![GitHub](https://img.shields.io/github/license/Daniel31x13/open-analytics)  ![GitHub top language](https://img.shields.io/github/languages/top/daniel31x13/open-analytics)  ![GitHub last commit](https://img.shields.io/github/last-commit/daniel31x13/open-analytics)  ![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/m/Daniel31x13/open-analytics)
 ---
-### How it works:
+### How it works
 Basically there are 3 main parts:
-- <h3> The Client Script: </h3> This is the part where it should be in whatever page you want to retrieve data from (and then visualize in the dashboard.) it creates a websocket connection with the Core (Server) and sends some data to it and creates a cookie to be marked as a "Already visited page."
-- <h3> The Core (Server): </h3> This is the part where it gathers all the information from the client script and post it to a MongoDB database, it also creates a route for the dashboard to fetch where it sends the last month of data (user visits) from the MongoDB database.
-- <h3> The Dashboard: </h3> This is the part where it visualizes all the data that where fetched from the Core.
+- <h4> The Client Script: </h4> This is the part where it should be in whatever page you want to retrieve data from (and then visualize in the dashboard.) it creates a websocket connection with the Core (Server) and sends some data to it and creates a cookie to be marked as a "Already visited page."
+- <h4> The Core (Server): </h4> This is the part where it gathers all the information from the client script and post it to a MongoDB database, it also creates a route for the dashboard to fetch where it sends the last month of data (user visits) from the MongoDB database.
+- <h4> The Dashboard: </h4> This is the part where it visualizes all the data that where fetched from the Core.
 
 ### --> [Demo](https://open-analytics-demo.herokuapp.com/)
 
