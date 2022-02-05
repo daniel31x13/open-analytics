@@ -85,7 +85,7 @@ To generate a self-signed certificate, run the following in your shell:
     rm csr.pem
     
 #### Second Step:
-After getting your `.pem` files just change line [7](https://github.com/Daniel31x13/open-analytics/blob/14aa0a39bd2af7f432d7a0c044b4af3fbd781058/index.js#L7) to [12](https://github.com/Daniel31x13/open-analytics/blob/14aa0a39bd2af7f432d7a0c044b4af3fbd781058/index.js#L12) (index.js file) with this: 
+After getting your `.pem` files just change line [7](https://github.com/Daniel31x13/open-analytics/blob/d2e922a82e34803dee675409471223c81e0ddab2/index.js#L7) to [12](https://github.com/Daniel31x13/open-analytics/blob/d2e922a82e34803dee675409471223c81e0ddab2/index.js#L12) (index.js file) with this: 
 
 ```javascript
 const options = {
@@ -107,7 +107,7 @@ const io = require('socket.io')(https, {
 You'll need to add the `fs` module so add `const fs = require('fs');` at top of the index.js file.
 
 #### Fourth Step:
-Change line [83](https://github.com/Daniel31x13/open-analytics/blob/14aa0a39bd2af7f432d7a0c044b4af3fbd781058/index.js#L83) to [86](https://github.com/Daniel31x13/open-analytics/blob/14aa0a39bd2af7f432d7a0c044b4af3fbd781058/index.js#L86) (bottom of the index.js file) with this:
+Change line [105](https://github.com/Daniel31x13/open-analytics/blob/d2e922a82e34803dee675409471223c81e0ddab2/index.js#L105) to [108](https://github.com/Daniel31x13/open-analytics/blob/d2e922a82e34803dee675409471223c81e0ddab2/index.js#L108) (bottom of the index.js file) with this:
 
 ```javascript
 https.listen(PORT, () => {
