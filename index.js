@@ -18,22 +18,21 @@ let count;
 let totalClients = [];
 
 // Connect to MongoDB
-const uri =
-  "mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false"; // Edit accordingly
+const uri = "mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false"; // Edit accordingly
 const MClient = new MongoClient(uri);
 MClient.connect().catch(console.error);
 
 let results;
 app.use(async (req, res, next) => {
-  let threeMonthBefore = new Date(
+  let lastMonth = new Date(
     new Date().getFullYear(),
     new Date().getMonth() - 1,
     new Date().getDate()
-  ); // Last 14 days...
-  results = await MClient.db("DatabaseName")
+  );
+  results = await MClient.db("DatabaseName") // Edit 'DatabaseName' & 'CollectionName' accordingly
     .collection("CollectionName")
-    .find()
-    .toArray(); // Edit 'DatabaseName' & 'CollectionName' accordingly
+    .find({Date: {$gt: lastMonth}})
+    .toArray();
   next();
 });
 
