@@ -12,7 +12,7 @@ import Referrer from './component/Referrer';
 
 function App() {
   const [stats, setStats] = useState([]);
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState("0");
 
   useEffect(() => {
     async function fetchStats() {

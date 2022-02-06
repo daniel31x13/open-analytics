@@ -14,7 +14,7 @@ const io = require("socket.io")(http, {
 const cors = require("cors");
 
 const PORT = process.env.PORT || 8080; // Edit port if needed
-let count;
+let count = 0;
 let totalClients = [];
 
 // Connect to MongoDB
