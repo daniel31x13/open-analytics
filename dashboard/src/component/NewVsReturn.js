@@ -49,7 +49,6 @@ const NewVsReturn = ({users}) => {
     return rawUsers.filter((value, index, self) => index === self.findIndex((t) => t.x === value.x));
   }
 
-
   const data = {
     labels: uniqueDates,
     datasets: [
@@ -59,14 +58,14 @@ const NewVsReturn = ({users}) => {
         fill: true,
         backgroundColor: "rgba(75,192,192,0.2)",
         borderColor: "rgba(75,192,192,1)",
-        tension: 0.2
+        tension: 0.3
       },
       {
         label: "Returning Users",
         data: returningUsers(),
         fill: true,
         borderColor: "#742774",
-        tension: 0.2
+        tension: 0.3
       }
     ]
   };

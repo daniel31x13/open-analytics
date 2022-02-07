@@ -18,6 +18,7 @@ function App() {
     async function fetchStats() {
       const res = await fetch('http://192.168.1.4:8080/api');
       const data = await res.json();
+      data.sort((b, a) => new Date(b.Date) - new Date(a.Date)) // Sort by date
       setStats(data);
     }
     fetchStats();
@@ -28,7 +29,7 @@ function App() {
     }
     fetchActiveUsers();
   }, []);
-  
+
   return (
     <div className='container'>
       <About />

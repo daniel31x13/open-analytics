@@ -41,11 +41,11 @@ const VisitsByCountry = ({location}) => {
   }
 
   const data = {
-    labels: getTopCountriesKeys(),
+    labels: getTopCountriesKeys().slice(0, 5),
     datasets: [
       {
         label: 'Visits by country',
-        data: getTopCountriesValues(),
+        data: getTopCountriesValues().slice(0, 5),
         backgroundColor: [
           'rgba(255, 99, 132, 0.8)',
           'rgba(54, 162, 235, 0.8)',
@@ -64,7 +64,7 @@ const VisitsByCountry = ({location}) => {
         data={data} 
         options={{ 
           maintainAspectRatio: false,
-          plugins: { title: { display: true, text: 'Visits by each country:' }}
+          plugins: { title: { display: true, text: 'Top 5 countries:' }}
         }}
         />
   </div> );

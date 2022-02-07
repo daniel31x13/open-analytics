@@ -56,15 +56,14 @@ const Referrer = ({ links }) => {
     return sortedTop;
   }
 
-
-  const labels = getTopLinksKeys();
+  const labels = getTopLinksKeys().slice(0, 5);
 
   const data = {
     labels,
     datasets: [
       {
         label: 'Referrer',
-        data: getTopLinksValues(),
+        data: getTopLinksValues().slice(0, 5),
         backgroundColor: 'rgba(255, 99, 132, 0.8)',
       }
     ],
@@ -73,7 +72,7 @@ const Referrer = ({ links }) => {
   return ( <div className='Referrer'>
     <Bar 
         data={data} 
-        options={{maintainAspectRatio: false, indexAxis: 'y', borderRadius: 5, tension: 0.3, plugins: { title: { display: true, text: 'Coming from:' }}
+        options={{maintainAspectRatio: false, indexAxis: 'y', borderRadius: 5, tension: 0.3, plugins: { title: { display: true, text: 'Top 5 referrers:' }}
         }}
       />
   </div> );

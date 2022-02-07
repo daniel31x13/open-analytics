@@ -51,14 +51,14 @@ const TopPages = ({pages}) => {
 
 
 
-  const labels = getTopPagesKeys();
+  const labels = getTopPagesKeys().slice(0, 5);
 
   const data = {
     labels,
     datasets: [
       {
         label: 'Links',
-        data: getTopPagesValues(),
+        data: getTopPagesValues().slice(0, 5),
         backgroundColor: 'rgba(255, 99, 132, 0.8)',
       }
     ],
@@ -67,7 +67,7 @@ const TopPages = ({pages}) => {
   return ( <div className='TopPages'>
     <Bar 
         data={data} 
-        options={{maintainAspectRatio: false, indexAxis: 'y', borderRadius: 5, plugins: { title: { display: true, text: 'Top visited links:' }}
+        options={{maintainAspectRatio: false, indexAxis: 'y', borderRadius: 5, plugins: { title: { display: true, text: 'Top 5 visited links:' }}
         }}
       />
   </div> );
