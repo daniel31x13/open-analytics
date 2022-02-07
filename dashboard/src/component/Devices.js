@@ -6,7 +6,7 @@ const Devices = ({devices}) => {
     const Devices = devices.map((entity) => {return entity.IsMobile});
   
     let deviceStats = Devices.reduce((a, b) => a.set(b, (a.get(b) || 0) + 1), new Map());
-    let devicesKeys = [...deviceStats.keys()];
+    let devicesKeys = [...deviceStats.keys()].map(entity => entity = entity.toString());
 
     return devicesKeys;
   }
