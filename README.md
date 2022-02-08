@@ -1,17 +1,22 @@
+<div align="center">
+    
 # Open Analytics
 
-**Self-hosted, accurate analytics tool for your website in a clean minimalist interface.**
-
 ![GitHub](https://img.shields.io/github/license/Daniel31x13/open-analytics)  ![GitHub top language](https://img.shields.io/github/languages/top/daniel31x13/open-analytics)  ![GitHub last commit](https://img.shields.io/github/last-commit/daniel31x13/open-analytics)  ![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/m/Daniel31x13/open-analytics)
+
+**Self-hosted, accurate analytics tool for your website in a clean minimalist interface.**
+    
+[Live Demo](https://open-analytics-demo.herokuapp.com/)
+    
+</div>
+
 ---
+
 ### How it works
 Basically there are 3 main parts:
 - <h4> The Client Script: </h4> This is the part where it should be in whatever page you want to retrieve data from (and then visualize in the dashboard.) it creates a websocket connection with the Core (Server) and sends some data to it and creates a cookie to be marked as a "Already visited page."
 - <h4> The Core (Server): </h4> This is the part where it gathers all the information from the client script and post it to a MongoDB database, it also creates a route for the dashboard to fetch where it sends the last month of data (user visits) from the MongoDB database.
 - <h4> The Dashboard: </h4> This is the part where it visualizes all the data that where fetched from the Core using mostly ChartJS.
-
-### --> [Demo](https://open-analytics-demo.herokuapp.com/)
-
 ---
 
 This project is using the features of [open-analytics-core](https://github.com/Daniel31x13/open-analytics-core) and simply displaying them in a dashboard.
@@ -35,7 +40,7 @@ So like its predecessor it logs the following to a MongoDB database:
 - New vs returning users
 - Sum of all users activity per day
 
-------------
+---
 ### Requirements
 These are the versions that I had so it **may** work on your PC if you had an older version installed:
 - NodeJS (version 16 or later)
@@ -43,7 +48,7 @@ These are the versions that I had so it **may** work on your PC if you had an ol
 - Any other webserver that you want to serve your clients with (even NodeJS)
 - OpenSSL (Optional: For HTTPS setup.)
 
-------------
+---
 ### Setup
 
 #### First Step:
@@ -71,7 +76,7 @@ After that type `cd dashboard` and rerun `npm install`.
 #### Third Step:
 And finally run `npm run dev` (in the main folder).
 
-------------
+---
 
 ### HTTPS Setup
 If your website is using HTTPS instead of HTTP you'll need to do the steps which are shown below:
