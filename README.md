@@ -14,7 +14,7 @@
 
 ### How it works
 Basically there are 3 main parts:
-- <h4> The Client Script: </h4> This is the part where it should be in whatever page you want to retrieve data from (and then visualize in the dashboard.) it creates a websocket connection with the Core (Server) and sends some data to it and creates a cookie to be marked as a "Already visited page."
+- <h4> The Client Script: </h4> This is the part where it should be in any of the pages you want to retrieve data from (and then visualize in the dashboard.) it creates a websocket connection with the Core (Server) and sends some data to it and creates a cookie to be marked as a "Already visited page."
 - <h4> The Core (Server): </h4> This is the part where it gathers all the information from the client script and post it to a MongoDB database, it also creates a route for the dashboard to fetch where it sends the last month of data (user visits) from the MongoDB database.
 - <h4> The Dashboard: </h4> This is the part where it visualizes all the data that where fetched from the Core using mostly ChartJS.
 ---
