@@ -6,7 +6,7 @@
 
 **Self-hosted, accurate analytics tool for your website in a clean minimalist interface.**
     
-[Live Demo](https://open-analytics-demo.herokuapp.com/)
+[Demo with fake data](https://open-analytics-demo.herokuapp.com/)
     
 </div>
 
