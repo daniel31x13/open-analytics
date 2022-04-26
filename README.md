@@ -2,7 +2,7 @@
     
 # Open Analytics
 
-![GitHub](https://img.shields.io/github/license/Daniel31x13/open-analytics)  ![GitHub top language](https://img.shields.io/github/languages/top/daniel31x13/open-analytics)  ![GitHub last commit](https://img.shields.io/github/last-commit/daniel31x13/open-analytics)  ![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/m/Daniel31x13/open-analytics)
+![GitHub](https://img.shields.io/github/license/Daniel31x13/open-analytics)  ![GitHub top language](https://img.shields.io/github/languages/top/daniel31x13/open-analytics)
 
 **Self-hosted, accurate analytics tool for your website in a clean minimalist interface.**
     
