@@ -1,22 +1,41 @@
 {
-  "name": "open-analytics-core",
-  "version": "1.1.0",
+  "name": "pen-analytics",
   "description": "Self-hosted, accurate analytics tool for your website in a clean minimalist interface.",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index",
-    "dev": "concurrently --kill-others \"node index\" \"cd dashboard && npm start\""
-  },
-  "author": "Daniel",
-  "license": "MIT",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:8080",
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "fast-geoip": "^1.1.54",
-    "mongodb": "^4.3.0",
-    "socket.io": "^4.4.0"
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "chart.js": "^3.7.0",
+    "react": "^17.0.2",
+    "react-chartjs-2": "^4.0.1",
+    "react-dom": "^17.0.2",
+    "react-scripts": "5.0.0"
   },
-  "devDependencies": {
-    "concurrently": "^7.0.0"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

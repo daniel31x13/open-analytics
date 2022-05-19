@@ -1,25 +1,22 @@
 # dependencies
-node_modules
-
-### Dashboard
-# dependencies
-dashboard/node_modules
-dashboard/.pnp
-dashboard/.pnp.js
+api/node_modules
+/node_modules
+/.pnp
+/.pnp.js
 
 # testing
-dashboard/coverage
+/coverage
 
 # production
-dashboard/build
+/build
 
 # misc
-dashboard/.DS_Store
-dashboard/.env.local
-dashboard/.env.development.local
-dashboard/.env.test.local
-dashboard/.env.production.local
+/.DS_Store
+/.env.local
+/.env.development.local
+/.env.test.local
+/.env.production.local
 
-dashboard/npm-debug.log*
-dashboard/yarn-debug.log*
-dashboard/yarn-error.log*
+/npm-debug.log*
+/yarn-debug.log*
+/yarn-error.log*
