@@ -9,6 +9,7 @@ import VisitsByCountry from './component/VisitsByCountry';
 import HoursOfActivityPerDay from './component/HoursOfActivityPerDay';
 import About from './component/About';
 import Referrer from './component/Referrer';
+import config from "./config.json";
 
 function App() {
   const [stats, setStats] = useState([]);
@@ -16,14 +17,14 @@ function App() {
 
   useEffect(() => {
     async function fetchStats() {
-      const res = await fetch('http://192.168.1.7:8080/api');
+      const res = await fetch(config.api.address + ":" + config.api.port + '/api');
       const data = await res.json();
       data.sort((b, a) => new Date(b.Date) - new Date(a.Date)) // Sort by date
       setStats(data);
     }
     fetchStats();
     async function fetchActiveUsers() {
-      const res = await fetch('http://192.168.1.7:8080/api/active');
+      const res = await fetch(config.api.address + ":" + config.api.port + "/api/active");
       const data = await res.text();
       setActive(parseInt(data));
     }

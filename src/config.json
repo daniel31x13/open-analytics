@@ -1,0 +1,14 @@
+{
+    "api": {
+        "port": 8070,
+        "uri": "mongodb://localhost:27017",
+        "databaseName": "DatabaseName",
+        "collectionName": "CollectionName",
+        "address": "http://192.168.1.7"
+    },
+    "tls_support": {
+        "enabled": false,
+        "key": "",
+        "cert": ""
+    }
+}

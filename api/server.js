@@ -3,8 +3,36 @@ const geoip = require("fast-geoip");
 const express = require("express");
 const { MongoClient } = require("mongodb");
 const app = express();
+const config = require("../src/config.json");
+const fs = require('fs');
 
-const http = require("http").createServer(app);
+tls_key = () => {
+  try {
+    return fs.readFileSync(config.tls_support.key);
+  } catch (err) {
+    return "";
+    console.log(err);
+  }
+}
+
+tls_cert = () => {
+  try {
+    return fs.readFileSync(config.tls_support.cert);
+  } catch (err) {
+    return "";
+    console.log(err);
+  }
+}
+
+const option = {
+  key: tls_key,
+  cert: tls_cert,
+  cors: {
+      origin: '*',
+    }
+}
+
+const http = require(config.tls_support.enabled ? "https" : "http").createServer(option, app);
 const io = require("socket.io")(http, {
   cors: {
     origin: "*",
@@ -13,12 +41,12 @@ const io = require("socket.io")(http, {
 
 const cors = require("cors");
 
-const PORT = process.env.PORT || 8080; // Edit port if needed
+const PORT = config.api.port;
 let count = 0;
 let totalClients = [];
 
 // Connect to MongoDB
-const uri = "mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false"; // Edit accordingly
+const uri = config.api.uri;
 const MClient = new MongoClient(uri);
 MClient.connect().catch(console.error);
 
@@ -29,8 +57,8 @@ app.use(async (req, res, next) => {
     new Date().getMonth() - 1,
     new Date().getDate()
   );
-  results = await MClient.db("DatabaseName") // Edit 'DatabaseName' & 'CollectionName' accordingly
-    .collection("CollectionName")
+  results = await MClient.db(config.api.databaseName)
+    .collection(config.api.collectionName)
     .find({Date: {$gt: lastMonth}})
     .toArray();
   next();
@@ -98,7 +126,7 @@ io.on("connection", async (socket) => {
     );
 
     // Add to DB
-    MClient.db("DatabaseName").collection("CollectionName").insertOne(user); // Edit 'DatabaseName' & 'CollectionName' accordingly
+    MClient.db(config.api.databaseName).collection(config.api.collectionName).insertOne(user);
   });
 });
 
