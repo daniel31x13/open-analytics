@@ -52,7 +52,7 @@ Add this code inside the `body` tag of whatever page you want to include in the 
 ```
 #### Third Step:
 Edit the [`./src/config.json`](src/config.json) file accordingly:
-```json
+```javascript
 {
     "api": { // Edit here accordingly
         "port": 8070,
