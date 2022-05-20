@@ -59,7 +59,7 @@ Edit the [`./src/config.json`](src/config.json) file accordingly:
         "uri": "mongodb://localhost:27017",
         "databaseName": "DatabaseName",
         "collectionName": "CollectionName",
-        "address": "http://192.168.1.7"
+        "address": "http://192.168.1.7" // DONT include the "/" at the end
     },
     "tls_support": { // Leave this as is if you dont need HTTPS support
         "enabled": false,
