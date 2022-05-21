@@ -42,8 +42,10 @@ function App() {
         <Devices devices={stats} />
         <VisitsByCountry location={stats} />
       </div>
-      <TopPages pages={stats} />
-      <Referrer links={stats} />
+      <div className='group'>
+        <TopPages pages={stats} />
+        <Referrer links={stats} />
+      </div>
       <HoursOfActivityPerDay activity={stats} />
       <NewVsReturn users={stats} />
     </div>
