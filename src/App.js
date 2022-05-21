@@ -34,10 +34,14 @@ function App() {
   return (
     <div className='container'>
       <About />
-      <ActiveVisitors active={active} />
-      <AvgVisitDuration time={stats} />
-      <Devices devices={stats} />
-      <VisitsByCountry location={stats} />
+      <div className='group'>
+        <ActiveVisitors active={active} />
+        <AvgVisitDuration time={stats} />
+      </div>
+      <div className='group'>
+        <Devices devices={stats} />
+        <VisitsByCountry location={stats} />
+      </div>
       <TopPages pages={stats} />
       <Referrer links={stats} />
       <HoursOfActivityPerDay activity={stats} />
