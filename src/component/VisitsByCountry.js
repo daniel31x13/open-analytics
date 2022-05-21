@@ -47,13 +47,14 @@ const VisitsByCountry = ({location}) => {
         label: 'Visits by country',
         data: getTopCountriesValues().slice(0, 5),
         backgroundColor: [
-          'rgba(255, 99, 132, 0.8)',
-          'rgba(54, 162, 235, 0.8)',
-          'rgba(255, 206, 86, 0.8)',
-          'rgba(75, 192, 192, 0.8)',
-          'rgba(153, 102, 255, 0.8)'
+          'rgba(255, 99, 132, 0.2)',
+          'rgba(54, 162, 235, 0.2)',
+          'rgba(255, 206, 86, 0.2)',
+          'rgba(75, 192, 192, 0.2)',
+          'rgba(153, 102, 255, 0.2)'
         ],
         borderWidth: 2,
+        borderColor: 'rgba(100, 0, 100, 1)',
         borderRadius: 5
       },
     ],

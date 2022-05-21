@@ -38,7 +38,10 @@ const HoursOfActivityPerDay = ({ activity }) => {
       {
         label: 'Minutes',
         data: Sec,
-        backgroundColor: 'rgba(255, 99, 132, 0.8)',
+        backgroundColor: 'rgba(0, 116, 204, 0.2)',
+        borderColor: 'rgba(0, 116, 204, 1)',
+        borderWidth: 2,
+        maxBarThickness: 50
       }
     ],
   };

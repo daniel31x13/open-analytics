@@ -58,13 +58,16 @@ const NewVsReturn = ({users}) => {
         fill: true,
         backgroundColor: "rgba(75,192,192,0.2)",
         borderColor: "rgba(75,192,192,1)",
+        borderWidth: 2,
         tension: 0.3
       },
       {
         label: "Returning Users",
         data: returningUsers(),
         fill: true,
-        borderColor: "#742774",
+        backgroundColor: "rgba(0, 116, 204, 0.2)",
+        borderColor: "rgba(0, 116, 204, 1)",
+        borderWidth: 2,
         tension: 0.3
       }
     ]

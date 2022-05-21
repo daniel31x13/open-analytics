@@ -27,10 +27,11 @@ const Devices = ({devices}) => {
         label: 'Devices',
         data: getDevicesValue(),
         backgroundColor: [
-          'rgba(255, 99, 132, 0.8)',
-          'rgba(54, 162, 235, 0.8)',
+          'rgba(255, 99, 132, 0.2)',
+          'rgba(54, 162, 235, 0.2)',
         ],
-        borderWidth: 1,
+        borderWidth: 2,
+        borderColor: 'rgba(100, 0, 100, 1)',
         borderRadius: 5
       },
     ],

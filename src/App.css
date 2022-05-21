@@ -1,8 +1,23 @@
+@media (min-width: 650px) {
+  .group {
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .group > div {
+    width: 100%;
+  }
+}
+
 .container {
   display: flex;
   flex-direction: column;
   padding: 10px;
   text-align: center;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .container > div {
@@ -106,14 +121,4 @@
   height: 300px;
   border-radius: 10px;
   text-align: center;
-}
-
-.group {
-  border-radius: 10px;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.group > div {
-  width: 100%;
 }
